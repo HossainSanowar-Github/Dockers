@@ -3,6 +3,8 @@
 """
 Created on Fri Jul 22 22:30:07 2022
 
+this api is checked by postman and localhost  
+
 @author: mdsanowarhossain
 """
 
@@ -22,7 +24,7 @@ classifier=pickle.load(pickle_in)
 def welcome():
     return 'welcome All'
 
-@app.route('/predict')
+@app.route('/predict', methods="GET")
 def predict_note_authentication():
     
     variance=request.args.get('variance')
